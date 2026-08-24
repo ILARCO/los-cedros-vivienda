@@ -163,7 +163,7 @@ select option{background:#091f16;color:white}
 .field-error{display:none;color:#f0a4a4;font-size:.76rem;margin-top:6px}
 .field-error.show{display:block}
 .honeypot{position:absolute!important;left:-99999px!important;width:1px!important;height:1px!important;overflow:hidden!important}
-.form .btn{width:100%;margin-top:4px}
+.form .btn{width:100%;margin-top:10px}
 .privacy{font-size:.76rem;color:#849289;margin-top:12px}
 .form-status{display:none;margin-top:14px;padding:13px 14px;border-radius:12px;font-size:.86rem}
 .form-status.show{display:block}
@@ -182,13 +182,119 @@ footer{padding:26px 0;background:#04120c;border-top:1px solid var(--line);color:
 .lightbox img{max-width:min(1200px,94vw);max-height:88vh;width:auto;border-radius:16px;box-shadow:0 30px 80px rgba(0,0,0,.5)}
 .lightbox-close{position:absolute;right:22px;top:20px;width:46px;height:46px;border-radius:50%;border:1px solid rgba(255,255,255,.2);background:rgba(255,255,255,.06);color:#fff;font-size:1.5rem;cursor:pointer}
 
-.consent-group{display:grid;gap:11px;margin:18px 0 4px}
-.check-row{display:flex;align-items:flex-start;gap:10px;font-size:.79rem;color:#9caaa1;line-height:1.45}
-.check-row input{width:17px;height:17px;min-height:0;margin:2px 0 0;accent-color:var(--gold);flex:0 0 auto}
-.check-row a,.legal-link{color:var(--gold2);text-decoration:underline;text-underline-offset:3px}
+
+
+
+
+.consent-group{
+  display:flex;
+  flex-direction:column;
+  gap:14px;
+  margin:20px 0 14px;
+  width:100%;
+}
+.consent-item{
+  width:100%;
+  min-width:0;
+  padding:15px 16px;
+  border:1px solid rgba(255,255,255,.10);
+  border-radius:16px;
+  background:rgba(255,255,255,.035);
+}
+.consent-check{
+  display:grid;
+  grid-template-columns:22px minmax(0,1fr);
+  gap:12px;
+  align-items:start;
+  width:100%;
+  margin:0;
+  color:#d8e0db;
+  cursor:pointer;
+  position:relative;
+}
+.consent-check input[type="checkbox"]{
+  position:absolute;
+  opacity:0;
+  width:1px;
+  height:1px;
+  pointer-events:none;
+}
+.checkbox-ui{
+  width:20px;
+  height:20px;
+  margin-top:2px;
+  border:2px solid var(--gold2);
+  border-radius:4px;
+  background:#081c13;
+  display:grid;
+  place-items:center;
+  box-shadow:0 0 0 1px rgba(239,211,142,.08);
+}
+.checkbox-ui::after{
+  content:"";
+  width:9px;
+  height:5px;
+  border-left:2px solid #102019;
+  border-bottom:2px solid #102019;
+  transform:rotate(-45deg) scale(0);
+  transform-origin:center;
+  transition:transform .12s ease;
+}
+.consent-check input[type="checkbox"]:checked + .checkbox-ui{
+  background:var(--gold2);
+  border-color:var(--gold2);
+}
+.consent-check input[type="checkbox"]:checked + .checkbox-ui::after{
+  transform:rotate(-45deg) scale(1);
+}
+.consent-check input[type="checkbox"]:focus-visible + .checkbox-ui{
+  outline:3px solid rgba(239,211,142,.35);
+  outline-offset:3px;
+}
+.consent-copy{
+  display:block;
+  min-width:0;
+}
+.consent-copy strong{
+  display:block;
+  color:#f2f6f3;
+  font-size:.88rem;
+  line-height:1.4;
+  margin:0 0 4px;
+}
+.consent-copy small{
+  display:block;
+  color:#b1beb7;
+  font-size:.81rem;
+  line-height:1.5;
+}
+.legal-inline{
+  display:inline-block;
+  margin:9px 0 0 34px;
+  padding:0;
+  background:none;
+  border:0;
+  color:var(--gold2);
+  text-decoration:underline;
+  text-underline-offset:3px;
+  cursor:pointer;
+  font:inherit;
+  font-size:.82rem;
+  font-weight:800;
+  line-height:1.35;
+  text-align:left;
+}
+@media(max-width:700px){
+  .consent-item{padding:14px}
+  .consent-check{gap:10px;grid-template-columns:20px minmax(0,1fr)}
+  .checkbox-ui{width:19px;height:19px}
+  .consent-copy strong{font-size:.85rem}
+  .consent-copy small{font-size:.79rem}
+  .legal-inline{margin-left:30px}
+}
 .legal-links{display:flex;gap:16px;flex-wrap:wrap;margin-top:4px}
 .legal-btn{background:none;border:0;padding:0;color:var(--gold2);text-decoration:underline;text-underline-offset:3px;cursor:pointer;font:inherit}
-.whatsapp-direct{display:inline-flex;align-items:center;gap:8px;margin-top:15px;color:var(--gold2);font-weight:800;font-size:.9rem}
+.whatsapp-direct{display:inline-flex;align-items:center;gap:8px;margin-top:18px;color:var(--gold2);font-weight:800;font-size:.9rem}
 .modal{position:fixed;inset:0;z-index:180;display:grid;place-items:center;padding:24px;background:rgba(0,0,0,.78);backdrop-filter:blur(8px);opacity:0;pointer-events:none;transition:.25s ease}
 .modal.open{opacity:1;pointer-events:auto}
 .modal-card{width:min(820px,96vw);max-height:86vh;overflow:auto;background:linear-gradient(160deg,#102b20,#091f16);border:1px solid var(--line);border-radius:24px;box-shadow:0 30px 90px rgba(0,0,0,.55);padding:30px;position:relative}
@@ -538,7 +644,7 @@ footer{padding:26px 0;background:#04120c;border-top:1px solid var(--line);color:
       <a href="#recorrido">Recorrido</a>
       <a href="#financiacion">Financiación</a>
       <a href="#preguntas">Preguntas</a>
-      <a class="btn btn-primary btn-small" href="#contacto">Hablar con un asesor</a>
+      <a class="btn btn-primary btn-small" href="https://wa.me/573118465667?text=Hola%2C%20quiero%20recibir%20informaci%C3%B3n%20sobre%20lotes%20para%20vivienda%20en%20Los%20Cedros." target="_blank" rel="noopener noreferrer">Hablar con un asesor</a>
     </nav>
     <button class="menu-btn" id="menuBtn" aria-label="Abrir menú" aria-expanded="false"><span class="menu-lines"></span></button>
   </div>
@@ -568,7 +674,7 @@ footer{padding:26px 0;background:#04120c;border-top:1px solid var(--line);color:
     <a href="#recorrido">Recorrido</a>
     <a href="#financiacion">Financiación</a>
     <a href="#preguntas">Preguntas</a>
-    <a class="btn btn-primary" href="#contacto">Hablar con un asesor</a>
+    <a class="btn btn-primary" href="https://wa.me/573118465667?text=Hola%2C%20quiero%20recibir%20informaci%C3%B3n%20sobre%20lotes%20para%20vivienda%20en%20Los%20Cedros." target="_blank" rel="noopener noreferrer">Hablar con un asesor</a>
   </nav>
 </div>
 
@@ -814,21 +920,38 @@ footer{padding:26px 0;background:#04120c;border-top:1px solid var(--line);color:
           <option>Aún estoy definiendo mi proyecto de vivienda</option>
         </select>
       </div>
-      <button class="btn btn-primary" type="submit">Enviar solicitud</button>
-      <div class="form-status" id="formStatus" role="status" aria-live="polite"></div>
       
-      <div class="consent-group">
-        <label class="check-row">
-          <input id="privacyConsent" type="checkbox" required>
-          <span>Autorizo el tratamiento de mis datos personales y el contacto por WhatsApp o teléfono para recibir información de Los Cedros, de acuerdo con la <button type="button" class="legal-btn" data-modal="privacyModal">Política de Privacidad y Tratamiento de Datos</button>.</span>
-        </label>
-        <label class="check-row">
-          <input id="termsConsent" type="checkbox" required>
-          <span>Declaro haber leído las <button type="button" class="legal-btn" data-modal="termsModal">Condiciones Comerciales</button> aplicables a la información publicada y al proceso de compra.</span>
-        </label>
-      </div>
-      <div class="field-error" id="consentError">Debes autorizar el tratamiento de datos y confirmar que leíste las condiciones comerciales.</div>
-      <a class="whatsapp-direct" id="directWhatsApp" href="#" target="_blank" rel="noopener">Hablar directamente por WhatsApp →</a>
+<div class="consent-group">
+  <div class="consent-item">
+    <label class="consent-check" for="privacyConsent">
+      <input id="privacyConsent" name="privacyConsent" type="checkbox" value="accepted" required>
+      <span class="checkbox-ui" aria-hidden="true"></span>
+      <span class="consent-copy">
+        <strong>Autorizo el tratamiento de mis datos personales.</strong>
+        <small>Acepto el contacto por WhatsApp o teléfono para recibir información de Los Cedros.</small>
+      </span>
+    </label>
+    <button type="button" class="legal-inline" data-modal="privacyModal">Leer Política de Privacidad y Tratamiento de Datos</button>
+  </div>
+  <div class="consent-item">
+    <label class="consent-check" for="termsConsent">
+      <input id="termsConsent" name="termsConsent" type="checkbox" value="accepted" required>
+      <span class="checkbox-ui" aria-hidden="true"></span>
+      <span class="consent-copy">
+        <strong>He leído las condiciones comerciales.</strong>
+        <small>Confirmo que conozco las condiciones aplicables a la información publicada y al proceso de compra.</small>
+      </span>
+    </label>
+    <button type="button" class="legal-inline" data-modal="termsModal">Leer Condiciones Comerciales</button>
+  </div>
+</div>
+<div class="field-error" id="consentError">Marca las dos casillas para continuar.</div>
+
+
+      <button class="btn btn-primary" type="submit">Continuar y enviar por WhatsApp</button>
+      <div class="form-status" id="formStatus" role="status" aria-live="polite"></div>
+
+      <a class="whatsapp-direct" id="directWhatsApp" href="https://wa.me/573118465667?text=Hola%2C%20quiero%20recibir%20informaci%C3%B3n%20sobre%20lotes%20para%20vivienda%20en%20Los%20Cedros." target="_blank" rel="noopener noreferrer">Hablar directamente por WhatsApp →</a>
 
     </form>
   </div>
@@ -855,7 +978,7 @@ footer{padding:26px 0;background:#04120c;border-top:1px solid var(--line);color:
   </div>
 </footer>
 
-<a class="btn btn-primary mobile-cta" href="#contacto">Hablar con un asesor</a>
+<a class="btn btn-primary mobile-cta" href="https://wa.me/573118465667?text=Hola%2C%20quiero%20recibir%20informaci%C3%B3n%20sobre%20lotes%20para%20vivienda%20en%20Los%20Cedros." target="_blank" rel="noopener noreferrer">Hablar con un asesor</a>
 
 
 <div class="modal" id="privacyModal" role="dialog" aria-modal="true" aria-labelledby="privacyTitle">
@@ -930,7 +1053,12 @@ footer{padding:26px 0;background:#04120c;border-top:1px solid var(--line);color:
   <img id="lightboxImage" alt="">
 </div>
 
-<script src="config.js"></script>
+<script>
+window.LOS_CEDROS_CONFIG = {
+  whatsapp: "573118465667",
+  email: ""
+};
+</script>
 <script>
 const cfg=window.LOS_CEDROS_CONFIG||{whatsapp:"",email:""};
 const nav=document.getElementById('nav');
@@ -1025,6 +1153,19 @@ function setError(id,on){
   input.setAttribute('aria-invalid',String(on));err.classList.toggle('show',on)
 }
 function normalizePhone(v){return v.replace(/[^\d]/g,'')}
+
+const privacyBox=document.getElementById('privacyConsent');
+const termsBox=document.getElementById('termsConsent');
+const consentErrorLive=document.getElementById('consentError');
+function refreshConsentError(){
+  if(!consentErrorLive||!privacyBox||!termsBox)return;
+  if(privacyBox.checked&&termsBox.checked){
+    consentErrorLive.classList.remove('show');
+  }
+}
+privacyBox?.addEventListener('change',refreshConsentError);
+termsBox?.addEventListener('change',refreshConsentError);
+
 form.addEventListener('submit',e=>{
   e.preventDefault();
   if(document.getElementById('website').value)return;
@@ -1040,7 +1181,22 @@ form.addEventListener('submit',e=>{
   const consentError=document.getElementById('consentError');
   const consentMissing=!privacyConsent||!termsConsent;
   if(consentError) consentError.classList.toggle('show',consentMissing);
-  if(Object.values(errors).some(Boolean)||consentMissing){statusEl.className='form-status warn show';statusEl.textContent='Revisa los campos indicados y confirma las autorizaciones antes de continuar.';return}
+  if(Object.values(errors).some(Boolean)||consentMissing){
+    statusEl.className='form-status warn show';
+    statusEl.textContent=consentMissing
+      ? 'Marca las dos casillas de autorización y vuelve a enviar.'
+      : 'Revisa los campos indicados antes de continuar.';
+    if(consentMissing){
+      const firstMissing=!privacyConsent
+        ? document.getElementById('privacyConsent')
+        : document.getElementById('termsConsent');
+      if(firstMissing){
+        firstMissing.focus({preventScroll:true});
+        firstMissing.scrollIntoView({behavior:'smooth',block:'center'});
+      }
+    }
+    return;
+  }
 
   const message=[
     'Hola, quiero recibir información sobre lotes para vivienda en Los Cedros.',
@@ -1058,7 +1214,7 @@ form.addEventListener('submit',e=>{
   if(cfg.whatsapp){
     const wa='https://wa.me/'+cfg.whatsapp.replace(/[^\d]/g,'')+'?text='+encodeURIComponent(message);
     statusEl.className='form-status ok show';statusEl.textContent='Abriendo WhatsApp para enviar tu solicitud…';
-    window.open(wa,'_blank','noopener');
+    window.location.href = wa;
     return;
   }
   if(cfg.email){
@@ -1070,7 +1226,7 @@ form.addEventListener('submit',e=>{
 
   // Nunca fingimos que el lead fue enviado si no existe un destino real.
   statusEl.className='form-status warn show';
-  statusEl.textContent='El canal de contacto aún no está configurado. Agrega el WhatsApp o correo comercial en config.js para activar el envío.';
+  statusEl.textContent='El canal de contacto no pudo iniciarse. Intenta nuevamente o usa el enlace directo de WhatsApp.';
 });
 
 
