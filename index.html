@@ -1055,14 +1055,13 @@ footer{padding:26px 0;background:#04120c;border-top:1px solid var(--line);color:
 
 <script>
 window.LOS_CEDROS_CONFIG = {
-  whatsapp: "573118465667",
-  email: ""
+  whatsapp: "573118465667"
 };
 </script>
 <script>
-const cfg=window.LOS_CEDROS_CONFIG||{whatsapp:"",email:""};
-const nav=document.getElementById('nav');
-addEventListener('scroll',()=>nav.classList.toggle('scrolled',scrollY>20),{passive:true});
+const cfg = window.LOS_CEDROS_CONFIG || { whatsapp: "" };
+const nav = document.getElementById('nav');
+addEventListener('scroll', () => nav.classList.toggle('scrolled', scrollY > 20), { passive: true });
 
 // Animaciones progresivas
 const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');io.unobserve(e.target)}}),{threshold:.12});
