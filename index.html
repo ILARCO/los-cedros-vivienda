@@ -1,0 +1,1161 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#071610">
+<meta name="description" content="Los Cedros: lotes campestres desde 119 m² para construir tu vivienda. Conoce el proyecto, opciones de financiación y agenda una visita con un asesor.">
+<meta property="og:title" content="Los Cedros | Lotes Campestres">
+<meta property="og:description" content="Lotes campestres desde 119 m² para construir tu hogar. Conoce el proyecto y solicita información personalizada.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="assets/hero-poster.jpg">
+<title>Los Cedros | Lotes Campestres</title>
+<style>
+:root{
+  --bg:#06150f; --bg2:#091e16; --bg3:#0e291e; --card:#102b20;
+  --gold:#d3aa57; --gold2:#efd38e; --text:#f5f8f6; --muted:#aebbb3;
+  --line:rgba(255,255,255,.09); --lineGold:rgba(211,170,87,.30);
+  --glass:rgba(7,25,18,.78); --shadow:0 30px 90px rgba(0,0,0,.30);
+  --r:26px; --ease:cubic-bezier(.22,.61,.36,1);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:86px}
+body{margin:0;background:var(--bg);color:var(--text);font-family:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif;line-height:1.55;overflow-x:hidden}
+body.lock{overflow:hidden}
+body:before{content:"";position:fixed;inset:0;z-index:-1;pointer-events:none;background:radial-gradient(circle at 10% 5%,rgba(211,170,87,.07),transparent 24%),radial-gradient(circle at 88% 45%,rgba(39,100,69,.08),transparent 26%)}
+img,video{display:block;width:100%}
+a{text-decoration:none;color:inherit}
+button,input,select{font:inherit}
+button{color:inherit}
+:focus-visible{outline:3px solid var(--gold2);outline-offset:3px}
+.container{width:min(1180px,calc(100% - 40px));margin:auto}
+.skip{position:fixed;left:12px;top:-60px;z-index:200;background:var(--gold2);color:#132019;padding:10px 15px;border-radius:10px;font-weight:800}
+.skip:focus{top:12px}
+.eyebrow{display:inline-flex;align-items:center;gap:10px;color:var(--gold2);font-weight:850;text-transform:uppercase;letter-spacing:.16em;font-size:.76rem}
+.eyebrow:before{content:"";width:28px;height:1px;background:var(--gold)}
+h1,h2,h3{font-family:Georgia,"Times New Roman",serif;line-height:1.02;margin:0;letter-spacing:-.025em}
+h1{font-size:clamp(3.4rem,8vw,7.3rem)}
+h2{font-size:clamp(2.3rem,4.8vw,4.7rem)}
+h3{font-size:clamp(1.35rem,2.1vw,2rem)}
+p{margin:0;color:var(--muted)}
+.btn{min-height:56px;padding:0 24px;border-radius:999px;display:inline-flex;align-items:center;justify-content:center;gap:.7rem;font-weight:850;border:1px solid transparent;transition:.35s var(--ease);position:relative;overflow:hidden;cursor:pointer}
+.btn:after{content:"";position:absolute;inset:0;transform:translateX(-130%);background:linear-gradient(110deg,transparent 28%,rgba(255,255,255,.25),transparent 72%);transition:.65s var(--ease)}
+.btn:hover:after{transform:translateX(130%)}
+.btn-primary{background:linear-gradient(135deg,var(--gold2),var(--gold));color:#132019;box-shadow:0 14px 40px rgba(211,170,87,.18)}
+.btn-primary:hover{transform:translateY(-3px);box-shadow:0 20px 48px rgba(211,170,87,.28)}
+.btn-ghost{background:rgba(255,255,255,.055);color:#fff;border-color:rgba(255,255,255,.16);backdrop-filter:blur(10px)}
+.btn-small{min-height:46px;padding:0 18px;font-size:.88rem}
+.nav{position:fixed;z-index:80;top:0;left:0;right:0;background:linear-gradient(180deg,rgba(4,16,11,.94),rgba(4,16,11,.54));border-bottom:1px solid rgba(255,255,255,.05);backdrop-filter:blur(14px);transition:.3s ease}
+.nav.scrolled{background:rgba(5,21,14,.97);box-shadow:0 12px 36px rgba(0,0,0,.23)}
+.nav-inner{height:76px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+.brand{display:flex;align-items:center;gap:11px;font-family:Georgia,serif;letter-spacing:.07em;font-size:1.22rem;white-space:nowrap}
+.brand-mark{width:38px;height:38px;border-radius:50%;border:1px solid rgba(211,170,87,.7);display:grid;place-items:center;color:var(--gold2);background:rgba(7,25,18,.65)}
+.nav-links{display:flex;align-items:center;gap:22px;font-size:.9rem;color:rgba(255,255,255,.76)}
+.nav-links>a:not(.btn):hover,.nav-links>a.active{color:#fff}
+.menu-btn{display:none;width:46px;height:46px;border-radius:50%;border:1px solid var(--line);background:rgba(255,255,255,.05);place-items:center;cursor:pointer}
+.menu-lines,.menu-lines:before,.menu-lines:after{width:20px;height:2px;background:#fff;display:block;position:relative;transition:.25s ease}
+.menu-lines:before,.menu-lines:after{content:"";position:absolute;left:0}
+.menu-lines:before{top:-6px}.menu-lines:after{top:6px}
+.mobile-menu{position:fixed;inset:0;z-index:75;background:rgba(3,15,10,.97);backdrop-filter:blur(20px);display:grid;place-items:center;opacity:0;pointer-events:none;transition:.28s ease}
+.mobile-menu.open{opacity:1;pointer-events:auto}
+.mobile-menu nav{display:grid;gap:20px;text-align:center}
+.mobile-menu a{font-family:Georgia,serif;font-size:2rem}
+.hero{min-height:100svh;position:relative;display:grid;align-items:end;overflow:hidden}
+.hero-media{position:absolute;inset:0;background:url('assets/hero-poster.jpg') center/cover no-repeat}
+.hero-media video{height:100%;object-fit:cover;opacity:0;transition:opacity .8s ease;filter:saturate(.92) contrast(1.04)}
+.hero-media video.ready{opacity:1}
+.hero-shade{position:absolute;inset:0;background:linear-gradient(90deg,rgba(2,15,10,.94) 0%,rgba(2,15,10,.72) 43%,rgba(2,15,10,.16) 78%),linear-gradient(0deg,rgba(3,17,11,.94) 0%,rgba(3,17,11,.14) 52%,rgba(3,17,11,.28) 100%)}
+.hero-shade:after{content:"";position:absolute;inset:0;background:radial-gradient(circle at 72% 24%,rgba(239,209,135,.12),transparent 23%)}
+.hero-content{position:relative;z-index:2;max-width:850px;padding:148px 0 104px}
+.hero h1 span{color:var(--gold2)}
+.hero-copy{font-size:clamp(1.05rem,1.7vw,1.25rem);max-width:660px;color:rgba(255,255,255,.83);margin:25px 0 30px}
+.hero-actions{display:flex;flex-wrap:wrap;gap:12px}
+.hero-proof{display:flex;flex-wrap:wrap;gap:10px;margin-top:28px}
+.proof-pill{padding:9px 13px;border:1px solid rgba(255,255,255,.14);background:rgba(3,17,11,.42);backdrop-filter:blur(10px);border-radius:999px;color:rgba(255,255,255,.83);font-size:.83rem}
+.floating-metrics{position:relative;z-index:4;margin-top:-36px}
+.metrics{display:grid;grid-template-columns:repeat(4,1fr);background:rgba(11,35,25,.9);backdrop-filter:blur(16px);border:1px solid var(--line);border-radius:22px;overflow:hidden;box-shadow:var(--shadow)}
+.metric{padding:24px;border-right:1px solid var(--line)}
+.metric:last-child{border-right:0}
+.metric strong{display:block;color:var(--gold2);font-size:1.34rem;margin-bottom:4px}
+.metric span{color:var(--muted);font-size:.86rem}
+section{padding:105px 0}
+.section-head{max-width:790px;margin-bottom:40px}
+.section-head h2{margin:12px 0 17px}
+.section-head p{font-size:1.05rem}
+.story-grid{display:grid;grid-template-columns:1.08fr .92fr;gap:28px;align-items:stretch}
+.photo-card{position:relative;overflow:hidden;border-radius:var(--r);border:1px solid var(--line);box-shadow:var(--shadow);min-height:635px}
+.photo-card img{height:100%;object-fit:cover;transform:scale(1.02);transition:1.15s var(--ease)}
+.photo-card:hover img{transform:scale(1.07)}
+.photo-card:after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,rgba(3,18,12,.82),transparent 54%)}
+.photo-copy{position:absolute;z-index:2;left:30px;right:30px;bottom:30px}
+.photo-copy strong{display:block;font-family:Georgia,serif;font-size:2rem;margin-bottom:8px}
+.photo-copy span{color:rgba(255,255,255,.73)}
+.story-copy{padding:38px;border-radius:var(--r);border:1px solid var(--line);background:radial-gradient(circle at 86% 10%,rgba(211,170,87,.11),transparent 30%),linear-gradient(160deg,#102b20,#0b2218);display:flex;flex-direction:column;justify-content:space-between}
+.story-copy h2{margin:13px 0 18px}
+.benefits{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:28px}
+.benefit{padding:21px;border:1px solid var(--line);border-radius:17px;background:rgba(255,255,255,.035);transition:.3s var(--ease)}
+.benefit:hover{transform:translateY(-5px);border-color:var(--lineGold);background:rgba(211,170,87,.05)}
+.benefit b{display:block;color:var(--gold2);margin-bottom:5px}
+.real{background:linear-gradient(180deg,#081e15,#0a2118);border-block:1px solid var(--line)}
+.real-grid{display:grid;grid-template-columns:1.03fr .97fr;gap:42px;align-items:center}
+.real-copy h2{margin:12px 0 18px}
+.real-copy p{font-size:1.05rem}
+.real-list{display:grid;gap:10px;margin:27px 0 30px}
+.real-item{display:flex;gap:13px;padding:13px 0;border-bottom:1px solid var(--line)}
+.dot{width:9px;height:9px;border-radius:50%;background:var(--gold);margin-top:8px;box-shadow:0 0 18px rgba(211,170,87,.6);flex:0 0 auto}
+.real-visual{border-radius:26px;overflow:hidden;border:1px solid var(--line);box-shadow:var(--shadow);position:relative}
+.real-visual img{aspect-ratio:16/10;object-fit:cover}
+.real-badge{position:absolute;left:22px;bottom:22px;padding:16px 18px;border-radius:16px;background:rgba(5,22,15,.78);backdrop-filter:blur(12px);border:1px solid rgba(255,255,255,.11)}
+.real-badge strong{display:block;color:var(--gold2);font-size:1.45rem}
+.gallery-head{display:flex;justify-content:space-between;gap:26px;align-items:end;margin-bottom:28px}
+.gallery-head .section-head{margin:0}
+.real-gallery{display:grid;grid-template-columns:1.2fr .8fr .8fr;gap:14px}
+.gallery-item{border-radius:20px;overflow:hidden;border:1px solid var(--line);background:#06130e;position:relative;min-height:250px;cursor:zoom-in}
+.gallery-item img{height:100%;object-fit:cover;transition:.7s var(--ease)}
+.gallery-item:hover img{transform:scale(1.045)}
+.gallery-item span{position:absolute;left:15px;bottom:14px;padding:8px 11px;border-radius:999px;background:rgba(4,18,12,.72);backdrop-filter:blur(8px);font-size:.76rem;color:rgba(255,255,255,.8);border:1px solid rgba(255,255,255,.1)}
+.video-tour{margin-top:18px;border-radius:24px;overflow:hidden;border:1px solid var(--line);box-shadow:var(--shadow);background:#000;position:relative}
+.video-tour video{aspect-ratio:16/9;object-fit:cover}
+.finance{padding:55px;border-radius:30px;background:radial-gradient(circle at 86% 5%,rgba(211,170,87,.15),transparent 30%),linear-gradient(135deg,#0d2d21,#071a12);border:1px solid rgba(211,170,87,.17);box-shadow:var(--shadow)}
+.finance-top{display:grid;grid-template-columns:1.15fr .85fr;gap:42px;align-items:end}
+.finance h2{margin-top:12px}
+.finance-top p{font-size:1.02rem}
+.finance-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:32px}
+.finance-card{padding:25px;border-radius:18px;border:1px solid var(--line);background:rgba(255,255,255,.04);transition:.3s var(--ease)}
+.finance-card:hover{transform:translateY(-4px);border-color:var(--lineGold)}
+.finance-card strong{display:block;color:var(--gold2);font-size:2.1rem;margin-bottom:5px}
+.fineprint{font-size:.78rem;color:#7f8d84;margin-top:14px}
+.trust-grid{display:grid;grid-template-columns:1fr 1fr;gap:42px;align-items:center}
+.trust-img{border-radius:26px;overflow:hidden;border:1px solid var(--line);box-shadow:var(--shadow)}
+.trust-img img{aspect-ratio:4/3;object-fit:cover}
+.trust-copy h2{margin:12px 0 18px}
+.trust-items{display:grid;gap:11px;margin-top:25px}
+.trust-item{padding:17px;border-radius:15px;border:1px solid var(--line);background:rgba(255,255,255,.035)}
+.trust-item b{color:var(--gold2)}
+.visit{padding:0;min-height:650px;position:relative;display:grid;align-items:center;background:url('assets/familia.webp') center/cover no-repeat;border-block:1px solid var(--line)}
+.visit:after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(3,18,12,.90),rgba(3,18,12,.28) 72%)}
+.visit-inner{position:relative;z-index:2;padding:90px 0}
+.visit-card{max-width:620px;padding:40px;border-radius:25px;background:rgba(7,27,19,.76);border:1px solid rgba(255,255,255,.13);backdrop-filter:blur(13px);box-shadow:var(--shadow)}
+.visit-card h2{margin:12px 0 18px}
+.visit-card p{color:rgba(255,255,255,.76);margin-bottom:26px}
+.faq{background:linear-gradient(180deg,#071710,#091f16);border-block:1px solid var(--line)}
+.faq-grid{display:grid;grid-template-columns:.85fr 1.15fr;gap:52px;align-items:start}
+.faq-intro h2{margin:12px 0 18px}
+.faq-list{display:grid;gap:10px}
+details{border:1px solid var(--line);background:rgba(255,255,255,.03);border-radius:16px;padding:0 18px}
+summary{list-style:none;cursor:pointer;padding:19px 32px 19px 0;font-weight:800;position:relative}
+summary::-webkit-details-marker{display:none}
+summary:after{content:"+";position:absolute;right:0;top:14px;color:var(--gold2);font-size:1.5rem;transition:.25s}
+details[open] summary:after{transform:rotate(45deg)}
+.faq-answer{color:var(--muted);padding:0 0 18px}
+.contact{background:linear-gradient(180deg,#081e15,#06150f)}
+.contact-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:46px;align-items:start}
+.contact-copy h2{margin:12px 0 18px}
+.contact-note{margin-top:27px;padding:20px;border-left:3px solid var(--gold);background:rgba(255,255,255,.035);border-radius:0 14px 14px 0}
+.contact-note b{display:block;color:var(--gold2);margin-bottom:5px}
+.form{padding:32px;border-radius:24px;background:linear-gradient(160deg,#102b20,#0c251a);border:1px solid var(--line);box-shadow:var(--shadow)}
+.field{margin-bottom:16px}
+label{display:block;font-size:.82rem;font-weight:800;margin-bottom:7px;color:#eef3f0}
+input,select{width:100%;height:54px;border-radius:12px;border:1px solid rgba(255,255,255,.12);background:#091f16;color:white;padding:0 14px;outline:none}
+input:focus,select:focus{border-color:var(--gold);box-shadow:0 0 0 3px rgba(211,170,87,.10)}
+input[aria-invalid="true"]{border-color:#dc7b7b}
+select option{background:#091f16;color:white}
+.field-error{display:none;color:#f0a4a4;font-size:.76rem;margin-top:6px}
+.field-error.show{display:block}
+.honeypot{position:absolute!important;left:-99999px!important;width:1px!important;height:1px!important;overflow:hidden!important}
+.form .btn{width:100%;margin-top:4px}
+.privacy{font-size:.76rem;color:#849289;margin-top:12px}
+.form-status{display:none;margin-top:14px;padding:13px 14px;border-radius:12px;font-size:.86rem}
+.form-status.show{display:block}
+.form-status.ok{background:rgba(58,149,95,.15);color:#c6ebd1;border:1px solid rgba(58,149,95,.28)}
+.form-status.warn{background:rgba(211,170,87,.12);color:#efd38e;border:1px solid rgba(211,170,87,.25)}
+.closing{text-align:center;padding:110px 0 125px;background:radial-gradient(circle at 50% 0%,rgba(211,170,87,.14),transparent 34%),#06150f}
+.closing h2{max-width:790px;margin:10px auto 18px}
+.closing p{max-width:650px;margin:0 auto 28px}
+footer{padding:26px 0;background:#04120c;border-top:1px solid var(--line);color:#7e8b83;font-size:.84rem}
+.footer-row{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
+.reveal{opacity:0;transform:translateY(25px);transition:.85s var(--ease)}
+.reveal.visible{opacity:1;transform:none}
+.mobile-cta{display:none}
+.lightbox{position:fixed;inset:0;z-index:150;background:rgba(0,0,0,.90);display:grid;place-items:center;padding:30px;opacity:0;pointer-events:none;transition:.25s ease}
+.lightbox.open{opacity:1;pointer-events:auto}
+.lightbox img{max-width:min(1200px,94vw);max-height:88vh;width:auto;border-radius:16px;box-shadow:0 30px 80px rgba(0,0,0,.5)}
+.lightbox-close{position:absolute;right:22px;top:20px;width:46px;height:46px;border-radius:50%;border:1px solid rgba(255,255,255,.2);background:rgba(255,255,255,.06);color:#fff;font-size:1.5rem;cursor:pointer}
+
+.consent-group{display:grid;gap:11px;margin:18px 0 4px}
+.check-row{display:flex;align-items:flex-start;gap:10px;font-size:.79rem;color:#9caaa1;line-height:1.45}
+.check-row input{width:17px;height:17px;min-height:0;margin:2px 0 0;accent-color:var(--gold);flex:0 0 auto}
+.check-row a,.legal-link{color:var(--gold2);text-decoration:underline;text-underline-offset:3px}
+.legal-links{display:flex;gap:16px;flex-wrap:wrap;margin-top:4px}
+.legal-btn{background:none;border:0;padding:0;color:var(--gold2);text-decoration:underline;text-underline-offset:3px;cursor:pointer;font:inherit}
+.whatsapp-direct{display:inline-flex;align-items:center;gap:8px;margin-top:15px;color:var(--gold2);font-weight:800;font-size:.9rem}
+.modal{position:fixed;inset:0;z-index:180;display:grid;place-items:center;padding:24px;background:rgba(0,0,0,.78);backdrop-filter:blur(8px);opacity:0;pointer-events:none;transition:.25s ease}
+.modal.open{opacity:1;pointer-events:auto}
+.modal-card{width:min(820px,96vw);max-height:86vh;overflow:auto;background:linear-gradient(160deg,#102b20,#091f16);border:1px solid var(--line);border-radius:24px;box-shadow:0 30px 90px rgba(0,0,0,.55);padding:30px;position:relative}
+.modal-card h2{font-size:clamp(2rem,4vw,3.2rem);margin:8px 0 18px}
+.modal-card h3{font-size:1.25rem;margin:24px 0 9px;color:var(--gold2)}
+.modal-card p,.modal-card li{color:#b7c1bb;font-size:.94rem}
+.modal-card ul{padding-left:21px}
+.modal-close{position:sticky;top:0;float:right;width:42px;height:42px;border-radius:50%;border:1px solid rgba(255,255,255,.14);background:#0b2118;color:#fff;cursor:pointer;font-size:1.35rem;z-index:2}
+.modal-note{margin-top:20px;padding:14px 16px;border-left:3px solid var(--gold);background:rgba(211,170,87,.07);border-radius:0 12px 12px 0}
+
+@media(max-width:980px){
+  .nav-links{display:none}.menu-btn{display:grid}
+  .story-grid,.real-grid,.trust-grid,.faq-grid,.contact-grid{grid-template-columns:1fr}
+  .photo-card{min-height:520px}
+  .finance-top{grid-template-columns:1fr}
+  .real-gallery{grid-template-columns:1fr 1fr}.gallery-item:first-child{grid-column:1/-1}
+  .metrics{grid-template-columns:1fr 1fr}.metric:nth-child(2){border-right:0}.metric:nth-child(-n+2){border-bottom:1px solid var(--line)}
+}
+@media(max-width:700px){
+  .container{width:min(100% - 28px,1180px)}
+  section{padding:76px 0}
+  .nav-inner{height:68px}
+  .hero-content{padding:118px 0 80px}
+  .hero h1{font-size:clamp(3.15rem,16vw,5.1rem)}
+  .hero-actions .btn{width:100%}
+  .floating-metrics{margin-top:-25px}
+  .metrics{grid-template-columns:1fr}
+  .metric{border-right:0!important;border-bottom:1px solid var(--line)!important}.metric:last-child{border-bottom:0!important}
+  .photo-card{min-height:470px}.story-copy{padding:28px}.benefits{grid-template-columns:1fr}
+  .real-gallery{grid-template-columns:1fr}.gallery-item:first-child{grid-column:auto}.gallery-item{min-height:230px}
+  .finance{padding:33px 23px}.finance-grid{grid-template-columns:1fr}
+  .visit{min-height:600px;background-position:58% center}.visit-card{padding:29px}
+  .mobile-cta{display:flex;position:fixed;left:14px;right:14px;bottom:14px;z-index:70;box-shadow:0 15px 40px rgba(0,0,0,.34)}
+  footer{padding-bottom:92px}
+}
+@media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important;animation:none!important;transition:none!important}.reveal{opacity:1;transform:none}}
+
+.bonus-section{
+  padding:54px 0;
+  background:radial-gradient(circle at 82% 20%,rgba(239,211,142,.14),transparent 26%),linear-gradient(180deg,#0a2218,#071810);
+  border-block:1px solid rgba(211,170,87,.18);
+}
+.bonus-card{
+  position:relative;overflow:hidden;display:grid;grid-template-columns:1.05fr .95fr;gap:38px;align-items:center;
+  padding:40px;border:1px solid rgba(211,170,87,.38);border-radius:28px;
+  background:linear-gradient(135deg,rgba(211,170,87,.11),rgba(255,255,255,.025)),#102b20;
+  box-shadow:0 28px 80px rgba(0,0,0,.28);
+}
+.bonus-card:before{
+  content:"";position:absolute;width:320px;height:320px;right:-120px;top:-150px;border-radius:50%;
+  background:rgba(211,170,87,.08);pointer-events:none;
+}
+.bonus-copy,.countdown-wrap{position:relative;z-index:1;min-width:0}
+.bonus-kicker{
+  display:inline-flex;align-items:center;gap:9px;margin-bottom:10px;color:var(--gold2);
+  font-size:.76rem;font-weight:900;text-transform:uppercase;letter-spacing:.14em;
+}
+.bonus-kicker:before{content:"";width:9px;height:9px;border-radius:50%;background:var(--gold);box-shadow:0 0 18px rgba(211,170,87,.75)}
+.bonus-copy h2{font-size:clamp(2.3rem,4.8vw,4.2rem);margin:0 0 15px}
+.bonus-copy p{max-width:670px;font-size:1.02rem}.bonus-copy p strong{color:var(--gold2)}
+.bonus-actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:22px}
+.bonus-date{
+  display:inline-flex;margin-top:15px;padding:8px 12px;border-radius:999px;
+  background:rgba(211,170,87,.10);border:1px solid rgba(211,170,87,.23);
+  color:#e9d7a9;font-size:.79rem;font-weight:800;
+}
+.countdown-wrap{padding:24px;border-radius:22px;border:1px solid rgba(255,255,255,.08);background:rgba(4,18,12,.38);backdrop-filter:blur(10px)}
+.countdown-label{text-align:center;color:#d2dbd5;font-size:.86rem;font-weight:800;margin-bottom:14px}
+.countdown{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:9px}
+.countdown-unit{min-width:0;padding:19px 7px 16px;border-radius:16px;text-align:center;background:#071b12;border:1px solid rgba(211,170,87,.16)}
+.countdown-unit strong{
+  display:block;color:#fff2cf;font-family:Georgia,"Times New Roman",serif;
+  font-size:clamp(1.8rem,3vw,2.7rem);line-height:1;font-variant-numeric:tabular-nums;
+}
+.countdown-unit span{display:block;margin-top:8px;color:#91a098;font-size:.65rem;font-weight:900;text-transform:uppercase;letter-spacing:.08em}
+.countdown-expired{display:none;padding:24px 18px;border-radius:16px;text-align:center;color:#d6dfd9;font-weight:800;background:#071b12;border:1px solid rgba(255,255,255,.08)}
+.hero-bonus-link{display:inline-flex;align-items:center;gap:8px;margin-top:16px;color:var(--gold2);font-weight:850;font-size:.9rem}
+.hero-bonus-link:before{content:"";width:7px;height:7px;border-radius:50%;background:var(--gold);box-shadow:0 0 14px rgba(211,170,87,.7)}
+@media(max-width:860px){.bonus-card{grid-template-columns:1fr;padding:30px 24px}}
+@media(max-width:560px){
+  .bonus-section{padding:38px 0}.countdown-wrap{padding:16px 10px}.countdown{gap:5px}
+  .countdown-unit{padding:15px 3px 13px;border-radius:12px}.countdown-unit strong{font-size:clamp(1.35rem,8vw,2rem)}
+  .countdown-unit span{font-size:.54rem;letter-spacing:.04em}.bonus-actions .btn{width:100%}
+}
+
+
+/* ===== BONO PROMOCIONAL SIEMPRE VISIBLE ===== */
+.promo-bar{
+  position:fixed;
+  top:76px;
+  left:0;
+  right:0;
+  z-index:79;
+  background:linear-gradient(90deg,#b98c36 0%,#e4c271 50%,#b98c36 100%);
+  color:#122019;
+  border-bottom:1px solid rgba(255,255,255,.28);
+  box-shadow:0 10px 28px rgba(0,0,0,.22);
+}
+.promo-inner{
+  min-height:56px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:18px;
+  padding:7px 0;
+  font-size:.82rem;
+  font-weight:850;
+}
+.promo-title{
+  display:flex;
+  align-items:center;
+  gap:8px;
+  white-space:nowrap;
+}
+.promo-title b{letter-spacing:.08em}
+.promo-mini-countdown{
+  display:flex;
+  align-items:center;
+  gap:6px;
+  font-variant-numeric:tabular-nums;
+}
+.promo-mini-countdown span{
+  min-width:50px;
+  padding:5px 7px;
+  text-align:center;
+  border-radius:8px;
+  background:rgba(9,34,24,.10);
+  border:1px solid rgba(9,34,24,.16);
+}
+.promo-link{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  min-height:34px;
+  padding:0 14px;
+  border-radius:999px;
+  background:#0a261b;
+  color:#fff;
+  font-size:.76rem;
+  white-space:nowrap;
+}
+.hero-content{padding-top:220px!important}
+
+/* ===== SECCIÓN GRANDE DEL BONO ===== */
+.bonus-section{
+  padding:58px 0;
+  background:
+    radial-gradient(circle at 82% 20%,rgba(239,211,142,.14),transparent 26%),
+    linear-gradient(180deg,#0a2218,#071810);
+  border-top:1px solid rgba(211,170,87,.18);
+  border-bottom:1px solid rgba(211,170,87,.18);
+}
+.bonus-card{
+  position:relative;
+  overflow:hidden;
+  display:grid;
+  grid-template-columns:1.05fr .95fr;
+  gap:38px;
+  align-items:center;
+  padding:42px;
+  border:1px solid rgba(211,170,87,.42);
+  border-radius:28px;
+  background:
+    linear-gradient(135deg,rgba(211,170,87,.12),rgba(255,255,255,.025)),
+    #102b20;
+  box-shadow:0 28px 80px rgba(0,0,0,.30);
+}
+.bonus-card:before{
+  content:"";
+  position:absolute;
+  width:320px;
+  height:320px;
+  right:-120px;
+  top:-150px;
+  border-radius:50%;
+  background:rgba(211,170,87,.09);
+  pointer-events:none;
+}
+.bonus-copy,.countdown-wrap{position:relative;z-index:1;min-width:0}
+.bonus-kicker{
+  display:inline-flex;
+  align-items:center;
+  gap:9px;
+  margin-bottom:10px;
+  color:var(--gold2);
+  font-size:.76rem;
+  font-weight:900;
+  text-transform:uppercase;
+  letter-spacing:.14em;
+}
+.bonus-kicker:before{
+  content:"";
+  width:9px;
+  height:9px;
+  border-radius:50%;
+  background:var(--gold);
+  box-shadow:0 0 18px rgba(211,170,87,.75);
+}
+.bonus-copy h2{
+  font-size:clamp(2.3rem,4.8vw,4.2rem);
+  margin:0 0 15px;
+}
+.bonus-copy p{max-width:670px;font-size:1.02rem}
+.bonus-copy p strong{color:var(--gold2)}
+.bonus-date{
+  display:inline-flex;
+  margin-top:16px;
+  padding:8px 12px;
+  border-radius:999px;
+  background:rgba(211,170,87,.10);
+  border:1px solid rgba(211,170,87,.23);
+  color:#ead7a4;
+  font-size:.80rem;
+  font-weight:850;
+}
+.bonus-actions{
+  display:flex;
+  flex-wrap:wrap;
+  gap:10px;
+  margin-top:22px;
+}
+.countdown-wrap{
+  padding:25px;
+  border-radius:22px;
+  border:1px solid rgba(255,255,255,.09);
+  background:rgba(4,18,12,.44);
+  backdrop-filter:blur(10px);
+}
+.countdown-label{
+  margin-bottom:14px;
+  color:#d2dbd5;
+  font-size:.86rem;
+  font-weight:800;
+  text-align:center;
+}
+.countdown{
+  display:grid;
+  grid-template-columns:repeat(4,minmax(0,1fr));
+  gap:9px;
+}
+.countdown-unit{
+  min-width:0;
+  padding:20px 7px 16px;
+  border-radius:16px;
+  text-align:center;
+  background:#071b12;
+  border:1px solid rgba(211,170,87,.17);
+}
+.countdown-unit strong{
+  display:block;
+  color:#fff2cf;
+  font-family:Georgia,"Times New Roman",serif;
+  font-size:clamp(1.8rem,3vw,2.7rem);
+  line-height:1;
+  font-variant-numeric:tabular-nums;
+}
+.countdown-unit span{
+  display:block;
+  margin-top:8px;
+  color:#91a098;
+  font-size:.65rem;
+  font-weight:900;
+  text-transform:uppercase;
+  letter-spacing:.08em;
+}
+.countdown-expired{
+  display:none;
+  padding:24px 18px;
+  border-radius:16px;
+  text-align:center;
+  color:#d6dfd9;
+  font-weight:800;
+  background:#071b12;
+  border:1px solid rgba(255,255,255,.08);
+}
+.hero-bonus-link{
+  display:inline-flex;
+  align-items:center;
+  gap:8px;
+  margin-top:16px;
+  color:var(--gold2);
+  font-weight:850;
+  font-size:.9rem;
+}
+.hero-bonus-link:before{
+  content:"";
+  width:7px;
+  height:7px;
+  border-radius:50%;
+  background:var(--gold);
+  box-shadow:0 0 14px rgba(211,170,87,.7);
+}
+@media(max-width:860px){
+  .promo-inner{gap:8px;justify-content:space-between}
+  .promo-title .promo-long{display:none}
+  .bonus-card{grid-template-columns:1fr;padding:30px 24px}
+}
+@media(max-width:700px){
+  .promo-bar{top:68px}
+  .promo-inner{min-height:52px;font-size:.70rem}
+  .promo-title{font-size:.68rem}
+  .promo-mini-countdown{gap:3px;font-size:.66rem}
+  .promo-mini-countdown span{min-width:39px;padding:4px}
+  .promo-link{padding:0 10px;font-size:.66rem}
+  .hero-content{padding-top:190px!important}
+}
+@media(max-width:560px){
+  .bonus-section{padding:38px 0}
+  .countdown-wrap{padding:16px 10px}
+  .countdown{gap:5px}
+  .countdown-unit{padding:15px 3px 13px;border-radius:12px}
+  .countdown-unit strong{font-size:clamp(1.35rem,8vw,2rem)}
+  .countdown-unit span{font-size:.54rem;letter-spacing:.04em}
+  .bonus-actions .btn{width:100%}
+}
+
+
+.youtube-frame{
+  position:relative;
+  width:100%;
+  aspect-ratio:16/9;
+  border-radius:24px;
+  overflow:hidden;
+  border:1px solid var(--line);
+  box-shadow:var(--shadow);
+  background:#000;
+}
+.youtube-frame iframe{
+  position:absolute;
+  inset:0;
+  width:100%;
+  height:100%;
+  border:0;
+}
+
+</style>
+</head>
+<body>
+<a class="skip" href="#contenido">Saltar al contenido</a>
+
+<header class="nav" id="nav">
+  <div class="container nav-inner">
+    <a class="brand" href="#inicio" aria-label="Los Cedros, ir al inicio"><span class="brand-mark"><img src="assets/pino-logo.svg" alt="Logo de pino Los Cedros" style="width:22px;height:22px;display:block"></span><span>LOS CEDROS</span></a>
+    <nav class="nav-links" aria-label="Navegación principal">
+      <a href="#bono-descuento">Bono</a>
+      <a href="#proyecto">Proyecto</a>
+      <a href="#recorrido">Recorrido</a>
+      <a href="#financiacion">Financiación</a>
+      <a href="#preguntas">Preguntas</a>
+      <a class="btn btn-primary btn-small" href="#contacto">Hablar con un asesor</a>
+    </nav>
+    <button class="menu-btn" id="menuBtn" aria-label="Abrir menú" aria-expanded="false"><span class="menu-lines"></span></button>
+  </div>
+</header>
+
+<div class="promo-bar" id="promoBar" aria-label="Bono promocional vigente">
+  <div class="container promo-inner">
+    <div class="promo-title">
+      <b>BONO DE DESCUENTO</b>
+      <span class="promo-long">· vigente hasta el 30 de septiembre</span>
+    </div>
+    <div class="promo-mini-countdown" aria-live="polite">
+      <span><b id="miniDays">00</b>d</span>
+      <span><b id="miniHours">00</b>h</span>
+      <span><b id="miniMinutes">00</b>m</span>
+      <span><b id="miniSeconds">00</b>s</span>
+    </div>
+    <a class="promo-link" href="#bono-descuento">Ver bono</a>
+  </div>
+</div>
+
+
+<div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+  <nav aria-label="Navegación móvil">
+    <a href="#bono-descuento">Bono</a>
+    <a href="#proyecto">Proyecto</a>
+    <a href="#recorrido">Recorrido</a>
+    <a href="#financiacion">Financiación</a>
+    <a href="#preguntas">Preguntas</a>
+    <a class="btn btn-primary" href="#contacto">Hablar con un asesor</a>
+  </nav>
+</div>
+
+<main id="contenido">
+<section class="hero" id="inicio">
+  <div class="hero-media">
+    <video id="heroVideo" muted loop playsinline preload="none" aria-hidden="true"></video>
+    <div class="hero-shade"></div>
+  </div>
+  <div class="container hero-content reveal">
+    <div class="eyebrow">Lotes campestres · vivienda · naturaleza</div>
+    <h1>Tu terreno.<br><span>Tu hogar.</span><br>Tu futuro.</h1>
+    <p class="hero-copy">Descubre Los Cedros: lotes campestres desde 119 m² pensados para construir tu vivienda en un entorno natural, tranquilo y con espacio para disfrutar en familia.</p>
+    <div class="hero-actions">
+      <a class="btn btn-primary" href="#contacto">Quiero recibir información</a>
+      <a class="btn btn-ghost" href="#recorrido">Conocer el proyecto</a>
+    </div>
+    <div class="hero-proof">
+      <span class="proof-pill">Desde 119 m²</span>
+      <span class="proof-pill">Opciones de financiación</span>
+      <span class="proof-pill">Conoce dónde construirás</span>
+    </div>
+    <a class="hero-bonus-link" href="#bono-descuento">Bono de descuento vigente hasta el 30 de septiembre →</a>
+  </div>
+</section>
+
+
+<section class="bonus-section" id="bono-descuento" aria-labelledby="bonusTitle">
+  <div class="container">
+    <div class="bonus-card">
+      <div class="bonus-copy">
+        <div class="bonus-kicker">Beneficio vigente</div>
+        <h2 id="bonusTitle">Aprovecha tu bono de descuento.</h2>
+        <p>
+          Si estás pensando en construir tu vivienda en Los Cedros, consulta con un asesor
+          las condiciones para acceder al <strong>bono promocional vigente</strong>.
+        </p>
+        <div class="bonus-date">Válido hasta el 30 de septiembre de 2026</div>
+        <div class="bonus-actions">
+          <a class="btn btn-primary" href="#contacto">Quiero conocer mi bono</a>
+          <a class="btn btn-ghost" href="#visita">Agendar una visita</a>
+        </div>
+      </div>
+      <div class="countdown-wrap">
+        <div class="countdown-label" id="countdownLabel">Tiempo restante para solicitar el beneficio</div>
+        <div class="countdown" id="bonusCountdown" aria-live="polite">
+          <div class="countdown-unit"><strong id="cdDays">00</strong><span>Días</span></div>
+          <div class="countdown-unit"><strong id="cdHours">00</strong><span>Horas</span></div>
+          <div class="countdown-unit"><strong id="cdMinutes">00</strong><span>Minutos</span></div>
+          <div class="countdown-unit"><strong id="cdSeconds">00</strong><span>Segundos</span></div>
+        </div>
+        <div class="countdown-expired" id="countdownExpired">
+          El bono promocional finalizó. Consulta por beneficios actualmente vigentes.
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<div class="floating-metrics">
+  <div class="container">
+    <div class="metrics reveal">
+      <div class="metric"><strong>Desde 119 m²</strong><span>Área de los lotes</span></div>
+      <div class="metric"><strong>Entorno campestre</strong><span>Espacio para construir y vivir</span></div>
+      <div class="metric"><strong>Financiación</strong><span>Consulta las condiciones vigentes</span></div>
+      <div class="metric"><strong>Acompañamiento</strong><span>Información antes de decidir</span></div>
+    </div>
+  </div>
+</div>
+
+<section>
+  <div class="container story-grid">
+    <div class="photo-card reveal">
+      <img src="assets/familia.webp" alt="Familia caminando por un sendero de piedra en un entorno campestre" loading="lazy" decoding="async">
+      <div class="photo-copy"><strong>Imagina llegar aquí.</strong><span>Un espacio para disfrutar, construir y compartir.</span></div>
+    </div>
+    <div class="story-copy reveal">
+      <div>
+        <div class="eyebrow">Una decisión con sentido</div>
+        <h2>Más que un lote, el lugar donde puede comenzar tu hogar.</h2>
+        <p>Los Cedros combina entorno natural, espacio y alternativas de compra para que puedas planear tu vivienda y avanzar paso a paso hacia un hogar propio.</p>
+      </div>
+      <div class="benefits">
+        <div class="benefit"><b>Construye tu hogar</b><span>Diseña una vivienda que responda a las necesidades de tu familia.</span></div>
+        <div class="benefit"><b>Vive mejor</b><span>Disfruta un entorno más abierto, tranquilo y natural.</span></div>
+        <div class="benefit"><b>Piensa en tu familia</b><span>Planea espacios para crecer, compartir y disfrutar.</span></div>
+        <div class="benefit"><b>Da el primer paso</b><span>Conoce las condiciones antes de comenzar tu proyecto de vivienda.</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="real" id="proyecto">
+  <div class="container real-grid">
+    <div class="real-copy reveal">
+      <div class="eyebrow">Conoce el proyecto</div>
+      <h2>Conoce el lugar donde podrías construir tu vivienda.</h2>
+      <p>Revisa el entorno, la distribución de los lotes y el acceso. Imagina cómo podría integrarse allí la vivienda que quieres construir.</p>
+      <div class="real-list">
+        <div class="real-item"><span class="dot"></span><div><b>Desde 119 m².</b> Espacio para comenzar tu proyecto de vivienda.</div></div>
+        <div class="real-item"><span class="dot"></span><div><b>Opciones para tu vivienda.</b> Consulta con el asesor las alternativas que mejor se ajusten al espacio que necesitas.</div></div>
+        <div class="real-item"><span class="dot"></span><div><b>Conoce dónde construirás.</b> Conoce el proyecto personalmente.</div></div>
+      </div>
+      <a class="btn btn-primary" href="#contacto">Solicitar información</a>
+    </div>
+    <div class="real-visual reveal">
+      <img src="assets/lotes.webp" alt="Vista aérea de los lotes campestres" loading="lazy" decoding="async">
+      <div class="real-badge"><strong>Desde 119 m²</strong><span>Lotes campestres</span></div>
+    </div>
+  </div>
+</section>
+
+<section id="recorrido">
+  <div class="container">
+    <div class="gallery-head">
+      <div class="section-head reveal">
+        <div class="eyebrow">Así se ve el proyecto</div>
+        <h2>Conoce el entorno de tu futura vivienda.</h2>
+        <p>Explora diferentes vistas del proyecto y recorre el entorno para imaginar cómo sería vivir allí.</p>
+      </div>
+      <a class="btn btn-ghost reveal" href="#visita">Quiero visitarlo</a>
+    </div>
+    <div class="real-gallery" id="gallery">
+      <button class="gallery-item reveal" type="button" data-image="assets/proyecto-real-01.jpg" aria-label="Ampliar primera vista del proyecto"><img src="assets/proyecto-real-01.jpg" alt="Entrada del proyecto Los Cedros" loading="lazy" decoding="async"><span>Entrada del proyecto</span></button>
+      <button class="gallery-item reveal" type="button" data-image="assets/proyecto-real-02.jpg" aria-label="Ampliar recorrido del proyecto"><img src="assets/proyecto-real-02.jpg" alt="Vista aérea del proyecto Los Cedros" loading="lazy" decoding="async"><span>Vista del proyecto</span></button>
+      <button class="gallery-item reveal" type="button" data-image="assets/proyecto-real-03.jpg" aria-label="Ampliar vista general del proyecto"><img src="assets/proyecto-real-03.jpg" alt="Zona social del proyecto Los Cedros" loading="lazy" decoding="async"><span>Zona social</span></button>
+    </div>
+    <div class="video-tour reveal">
+      <div class="youtube-frame">
+        <iframe
+          src="https://www.youtube.com/embed/41I_R6NHrZI?rel=0&modestbranding=1"
+          title="Recorrido del proyecto Los Cedros"
+          loading="lazy"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          referrerpolicy="strict-origin-when-cross-origin"
+          allowfullscreen>
+        </iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="financiacion">
+  <div class="container">
+    <div class="finance reveal">
+      <div class="finance-top">
+        <div><div class="eyebrow">Facilidad de compra</div><h2>Tu hogar puede comenzar con una compra planeada paso a paso.</h2></div>
+        <p>Conoce con un asesor las alternativas de financiación y confirma las condiciones vigentes para el lote donde quieres construir tu vivienda.</p>
+      </div>
+      <div class="finance-grid">
+        <div class="finance-card"><strong>40%</strong><span>Inicial de referencia</span></div>
+        <div class="finance-card"><strong>Hasta 18</strong><span>Meses de financiación de referencia</span></div>
+        <div class="finance-card"><strong>Personalizada</strong><span>Consulta la alternativa aplicable a tu compra</span></div>
+      </div>
+      <div class="fineprint">Las condiciones comerciales pueden estar sujetas a disponibilidad, validación y cambios. Confírmalas con un asesor antes de tomar una decisión.</div>
+      <div style="margin-top:26px"><a class="btn btn-primary" href="#contacto">Conocer financiación para mi vivienda</a></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container trust-grid">
+    <div class="trust-img reveal"><img src="assets/entrada.webp" alt="Entrada del proyecto Los Cedros" loading="lazy" decoding="async"></div>
+    <div class="trust-copy reveal">
+      <div class="eyebrow">Decide con información</div>
+      <h2>Construir tu hogar empieza con una decisión bien informada.</h2>
+      <p>Antes de comenzar tu proyecto de vivienda, solicita la información comercial y documental correspondiente y resuelve tus preguntas con un asesor.</p>
+      <div class="trust-items">
+        <div class="trust-item"><b>Información clara.</b> Conoce las condiciones aplicables a tu compra.</div>
+        <div class="trust-item"><b>Acompañamiento.</b> Habla directamente con un asesor.</div>
+        <div class="trust-item"><b>Documentación.</b> Revisa la información correspondiente antes de decidir.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="visit" id="visita">
+  <div class="container visit-inner">
+    <div class="visit-card reveal">
+      <div class="eyebrow">Conócelo en persona</div>
+      <h2>Visita el lugar donde podría estar tu próximo hogar.</h2>
+      <p>Recorre Los Cedros, conoce el entorno y conversa con un asesor sobre el lote que mejor se adapte a la vivienda que quieres construir.</p>
+      <a class="btn btn-primary" href="#contacto">Quiero agendar una visita</a>
+    </div>
+  </div>
+</section>
+
+<section class="faq" id="preguntas">
+  <div class="container faq-grid">
+    <div class="faq-intro reveal">
+      <div class="eyebrow">Preguntas frecuentes</div>
+      <h2>Resuelve lo esencial antes de comenzar tu proyecto de vivienda.</h2>
+      <p>Los detalles particulares de cada lote y las condiciones de compra se confirman directamente con el equipo comercial.</p>
+    </div>
+    <div class="faq-list reveal">
+      <details><summary>¿Desde qué área están disponibles los lotes para vivienda?</summary><div class="faq-answer">Los lotes se ofrecen desde 119 m². El asesor puede orientarte sobre las opciones disponibles según el espacio que buscas para tu vivienda.</div></details>
+      <details><summary>¿Hay opciones de financiación?</summary><div class="faq-answer">Sí. Las condiciones mostradas son de referencia y deben confirmarse con el asesor.</div></details>
+      <details><summary>¿Puedo visitar el proyecto antes de elegir mi lote?</summary><div class="faq-answer">Sí. Puedes solicitar una visita para recorrer el entorno, conocer los lotes y evaluar dónde te gustaría construir tu vivienda.</div></details>
+      <details><summary>¿Qué debo revisar antes de comprar para construir vivienda?</summary><div class="faq-answer">Solicita la información comercial y documental correspondiente, revisa las condiciones aplicables al lote y aclara cualquier duda antes de iniciar tu proyecto de vivienda.</div></details>
+    </div>
+  </div>
+</section>
+
+<section class="contact" id="contacto">
+  <div class="container contact-grid">
+    <div class="contact-copy reveal">
+      <div class="eyebrow">Asesoría personalizada</div>
+      <h2>Cuéntanos cómo imaginas tu vivienda.</h2>
+      <p>Completa tus datos para recibir información sobre lotes, financiación y visita al proyecto para vivienda.</p>
+      <div class="contact-note"><b>Tu vivienda primero.</b><span>Así el asesor puede orientarte según el espacio y la compra que necesitas.</span></div>
+    </div>
+    <form class="form reveal" id="leadForm" novalidate>
+      <div class="honeypot" aria-hidden="true"><label for="website">No completar</label><input id="website" name="website" tabindex="-1" autocomplete="off"></div>
+      <div class="field">
+        <label for="nombre">Nombre</label>
+        <input id="nombre" name="nombre" type="text" autocomplete="name" placeholder="Tu nombre" required maxlength="80">
+        <div class="field-error" id="nombreError">Escribe tu nombre.</div>
+      </div>
+      <div class="field">
+        <label for="whatsapp">WhatsApp</label>
+        <input id="whatsapp" name="whatsapp" type="tel" inputmode="tel" autocomplete="tel" placeholder="Tu número de contacto" required maxlength="20">
+        <div class="field-error" id="whatsappError">Escribe un número de contacto válido.</div>
+      </div>
+      <div class="field">
+        <label for="interes">¿Qué tipo de compra estás considerando?</label>
+        <select id="interes" name="interes" required>
+          <option value="">Selecciona una opción</option>
+          <option>Un lote</option>
+          <option>Dos lotes</option>
+          <option>Tres o más lotes</option>
+          <option>Aún estoy explorando</option>
+        </select>
+        <div class="field-error" id="interesError">Selecciona una opción.</div>
+      </div>
+      <div class="field">
+        <label for="objetivo">¿Cómo imaginas tu vivienda?</label>
+        <select id="objetivo" name="objetivo">
+          <option value="">Selecciona una opción</option>
+          <option>Vivienda para vivir permanentemente</option>
+          <option>Vivienda de descanso o fines de semana</option>
+          <option>Vivienda para mi familia a futuro</option>
+          <option>Aún estoy definiendo mi proyecto de vivienda</option>
+        </select>
+      </div>
+      <button class="btn btn-primary" type="submit">Enviar solicitud</button>
+      <div class="form-status" id="formStatus" role="status" aria-live="polite"></div>
+      
+      <div class="consent-group">
+        <label class="check-row">
+          <input id="privacyConsent" type="checkbox" required>
+          <span>Autorizo el tratamiento de mis datos personales y el contacto por WhatsApp o teléfono para recibir información de Los Cedros, de acuerdo con la <button type="button" class="legal-btn" data-modal="privacyModal">Política de Privacidad y Tratamiento de Datos</button>.</span>
+        </label>
+        <label class="check-row">
+          <input id="termsConsent" type="checkbox" required>
+          <span>Declaro haber leído las <button type="button" class="legal-btn" data-modal="termsModal">Condiciones Comerciales</button> aplicables a la información publicada y al proceso de compra.</span>
+        </label>
+      </div>
+      <div class="field-error" id="consentError">Debes autorizar el tratamiento de datos y confirmar que leíste las condiciones comerciales.</div>
+      <a class="whatsapp-direct" id="directWhatsApp" href="#" target="_blank" rel="noopener">Hablar directamente por WhatsApp →</a>
+
+    </form>
+  </div>
+</section>
+
+<section class="closing">
+  <div class="container reveal">
+    <div class="eyebrow">Los Cedros</div>
+    <h2>Tu próximo hogar puede comenzar aquí.</h2>
+    <p>Conoce el lugar, revisa las alternativas y da el primer paso hacia la vivienda que quieres construir.</p>
+    <a class="btn btn-primary" href="#contacto">Quiero conocer dónde construir mi hogar</a>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="container footer-row">
+    <span>© Los Cedros · Lotes Campestres</span>
+    <div class="legal-links">
+      <button type="button" class="legal-btn" data-modal="privacyModal">Privacidad y tratamiento de datos</button>
+      <button type="button" class="legal-btn" data-modal="termsModal">Condiciones comerciales</button>
+    </div>
+    <span>Información comercial sujeta a condiciones y disponibilidad.</span>
+  </div>
+</footer>
+
+<a class="btn btn-primary mobile-cta" href="#contacto">Hablar con un asesor</a>
+
+
+<div class="modal" id="privacyModal" role="dialog" aria-modal="true" aria-labelledby="privacyTitle">
+  <div class="modal-card">
+    <button class="modal-close" type="button" aria-label="Cerrar">×</button>
+    <div class="eyebrow">Información legal</div>
+    <h2 id="privacyTitle">Privacidad y tratamiento de datos</h2>
+    <p><strong>Responsable comercial:</strong> Proyecto Los Cedros. <strong>Canal de contacto:</strong> WhatsApp +57 311 846 5667.</p>
+    <p>Al diligenciar el formulario, el titular autoriza de manera previa, expresa e informada el tratamiento de los datos que suministra, de acuerdo con la normativa colombiana vigente sobre protección de datos personales.</p>
+
+    <h3>Datos que podemos tratar</h3>
+    <p>Nombre, número de teléfono o WhatsApp, interés de compra y la información voluntaria relacionada con el proyecto de vivienda.</p>
+
+    <h3>Finalidades</h3>
+    <ul>
+      <li>Responder solicitudes de información sobre Los Cedros.</li>
+      <li>Contactar al interesado por WhatsApp o teléfono.</li>
+      <li>Informar sobre lotes, visitas, financiación y condiciones comerciales vigentes.</li>
+      <li>Dar seguimiento a la solicitud comercial.</li>
+      <li>Atender preguntas, peticiones o solicitudes relacionadas con los datos suministrados.</li>
+    </ul>
+
+    <h3>Derechos del titular</h3>
+    <p>El titular puede conocer, actualizar, rectificar y solicitar la supresión de sus datos; solicitar prueba de la autorización; ser informado sobre el uso dado a sus datos y revocar la autorización cuando sea procedente.</p>
+
+    <h3>Canal para ejercer derechos</h3>
+    <p>Las solicitudes relacionadas con datos personales pueden presentarse inicialmente a través del WhatsApp comercial +57 311 846 5667. Antes de publicación definitiva se recomienda complementar esta política con la razón social, NIT, domicilio y correo del responsable legal del proyecto.</p>
+
+    <h3>Conservación y seguridad</h3>
+    <p>Los datos se conservarán únicamente durante el tiempo razonablemente necesario para atender la relación comercial y las obligaciones aplicables. Se deberán aplicar medidas razonables para evitar acceso, pérdida, uso o divulgación no autorizados.</p>
+
+    <div class="modal-note">Esta versión deja funcional la autorización dentro de la landing. Para una política legal definitiva deben incorporarse los datos completos de la empresa o persona responsable del tratamiento.</div>
+  </div>
+</div>
+
+<div class="modal" id="termsModal" role="dialog" aria-modal="true" aria-labelledby="termsTitle">
+  <div class="modal-card">
+    <button class="modal-close" type="button" aria-label="Cerrar">×</button>
+    <div class="eyebrow">Información comercial</div>
+    <h2 id="termsTitle">Condiciones comerciales</h2>
+
+    <h3>1. Finalidad de la página</h3>
+    <p>La landing page tiene carácter informativo y promocional. Su objetivo es presentar Los Cedros y permitir que los interesados soliciten información para adquirir terrenos destinados a proyectos de vivienda.</p>
+
+    <h3>2. Área de los lotes</h3>
+    <p>Los lotes se comunican <strong>desde 119 m²</strong>. Las áreas, ubicación y características exactas deben confirmarse con el asesor y en la documentación correspondiente antes de cualquier decisión de compra.</p>
+
+    <h3>3. Precio</h3>
+    <p>La página no publica un precio final. El valor aplicable será informado por el asesor según el lote, condiciones vigentes y demás elementos de la negociación.</p>
+
+    <h3>4. Financiación</h3>
+    <p>Las referencias de 40 % de inicial y hasta 18 meses de financiación son informativas y deben ser confirmadas con el asesor. Pueden estar sujetas a cambios, disponibilidad, validación y condiciones particulares.</p>
+
+    <h3>5. Disponibilidad</h3>
+    <p>La disponibilidad de lotes puede cambiar sin previo aviso. Una solicitud enviada desde la página no constituye reserva, separación, promesa de compraventa ni aceptación de una oferta.</p>
+
+    <h3>6. Uso para vivienda</h3>
+    <p>La comunicación de Los Cedros está orientada a la adquisición de terreno para vivienda. La construcción efectiva, características de la vivienda, licencias, normas urbanísticas, uso del suelo, servicios y demás requisitos deberán verificarse en la documentación oficial y ante las autoridades competentes antes de construir.</p>
+
+    <h3>7. Imágenes y material audiovisual</h3>
+    <p>La página utiliza fotografías, video y material visual de apoyo. Algunas imágenes pueden ser ilustrativas o de ambientación. La realidad física, jurídica y urbanística del proyecto se confirma mediante visita, documentación y asesoría.</p>
+
+    <h3>8. Información vinculante</h3>
+    <p>Solo tendrán carácter vinculante los documentos contractuales suscritos por las partes y la información formal que corresponda al negocio. Los textos de esta página no reemplazan la revisión documental previa a la compra.</p>
+
+    <div class="modal-note">Antes de publicar definitivamente, confirma que las condiciones de financiación y cualquier afirmación sobre vivienda, servicios, vías o infraestructura coincidan con la documentación real del proyecto.</div>
+  </div>
+</div>
+
+<div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Imagen ampliada">
+  <button class="lightbox-close" id="lightboxClose" aria-label="Cerrar imagen">×</button>
+  <img id="lightboxImage" alt="">
+</div>
+
+<script src="config.js"></script>
+<script>
+const cfg=window.LOS_CEDROS_CONFIG||{whatsapp:"",email:""};
+const nav=document.getElementById('nav');
+addEventListener('scroll',()=>nav.classList.toggle('scrolled',scrollY>20),{passive:true});
+
+// Animaciones progresivas
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');io.unobserve(e.target)}}),{threshold:.12});
+document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+
+// Hero: no forzar video en móvil, ahorro de datos o reduced motion
+const heroVideo=document.getElementById('heroVideo');
+const reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
+const small=matchMedia('(max-width: 700px)').matches;
+const saveData=navigator.connection&&navigator.connection.saveData;
+if(!reduce&&!small&&!saveData){
+  const s=document.createElement('source');s.src='assets/hero.mp4';s.type='video/mp4';
+  heroVideo.appendChild(s);
+  heroVideo.addEventListener('canplay',()=>heroVideo.classList.add('ready'),{once:true});
+  heroVideo.load();heroVideo.play().catch(()=>{});
+}
+
+// Menú móvil
+const menuBtn=document.getElementById('menuBtn'),mobileMenu=document.getElementById('mobileMenu');
+function closeMenu(){mobileMenu.classList.remove('open');mobileMenu.setAttribute('aria-hidden','true');menuBtn.setAttribute('aria-expanded','false');document.body.classList.remove('lock')}
+menuBtn.addEventListener('click',()=>{
+  const open=!mobileMenu.classList.contains('open');
+  mobileMenu.classList.toggle('open',open);mobileMenu.setAttribute('aria-hidden',String(!open));menuBtn.setAttribute('aria-expanded',String(open));document.body.classList.toggle('lock',open)
+});
+mobileMenu.querySelectorAll('a').forEach(a=>a.addEventListener('click',closeMenu));
+addEventListener('keydown',e=>{if(e.key==='Escape')closeMenu()});
+
+// Scroll spy simple
+const sections=[...document.querySelectorAll('main section[id]')];
+const navAnchors=[...document.querySelectorAll('.nav-links a[href^="#"]')];
+const spy=new IntersectionObserver(es=>{
+  es.forEach(e=>{
+    if(e.isIntersecting){
+      navAnchors.forEach(a=>a.classList.toggle('active',a.getAttribute('href')==='#'+e.target.id))
+    }
+  })
+},{rootMargin:'-35% 0px -55% 0px'});
+sections.forEach(s=>spy.observe(s));
+
+// Lightbox de galería
+const lightbox=document.getElementById('lightbox'),lightboxImg=document.getElementById('lightboxImage'),lightboxClose=document.getElementById('lightboxClose');
+document.querySelectorAll('[data-image]').forEach(btn=>btn.addEventListener('click',()=>{
+  const img=btn.querySelector('img');lightboxImg.src=btn.dataset.image;lightboxImg.alt=img.alt;lightbox.classList.add('open');document.body.classList.add('lock');lightboxClose.focus()
+}));
+function closeLightbox(){lightbox.classList.remove('open');document.body.classList.remove('lock')}
+lightboxClose.addEventListener('click',closeLightbox);
+lightbox.addEventListener('click',e=>{if(e.target===lightbox)closeLightbox()});
+addEventListener('keydown',e=>{if(e.key==='Escape'&&lightbox.classList.contains('open'))closeLightbox()});
+
+
+// WhatsApp directo
+const directWhatsApp=document.getElementById('directWhatsApp');
+if(directWhatsApp && cfg.whatsapp){
+  const directMsg='Hola, quiero recibir información sobre lotes para vivienda en Los Cedros.';
+  directWhatsApp.href='https://wa.me/'+cfg.whatsapp.replace(/[^\d]/g,'')+'?text='+encodeURIComponent(directMsg);
+}
+
+// Modales legales
+const legalModals=[...document.querySelectorAll('.modal')];
+let lastModalTrigger=null;
+function openModal(id,trigger){
+  const modal=document.getElementById(id); if(!modal) return;
+  lastModalTrigger=trigger||null;
+  modal.classList.add('open'); document.body.classList.add('lock');
+  const close=modal.querySelector('.modal-close'); if(close) close.focus();
+}
+function closeModal(modal){
+  modal.classList.remove('open'); document.body.classList.remove('lock');
+  if(lastModalTrigger) lastModalTrigger.focus();
+}
+document.querySelectorAll('[data-modal]').forEach(btn=>btn.addEventListener('click',()=>openModal(btn.dataset.modal,btn)));
+legalModals.forEach(modal=>{
+  modal.querySelector('.modal-close').addEventListener('click',()=>closeModal(modal));
+  modal.addEventListener('click',e=>{if(e.target===modal) closeModal(modal)});
+});
+addEventListener('keydown',e=>{
+  if(e.key==='Escape'){
+    const open=document.querySelector('.modal.open');
+    if(open) closeModal(open);
+  }
+});
+
+// Formulario: validación + envío a WhatsApp o email si están configurados.
+const form=document.getElementById('leadForm'),statusEl=document.getElementById('formStatus');
+function setError(id,on){
+  const input=document.getElementById(id),err=document.getElementById(id+'Error');
+  if(!input||!err)return;
+  input.setAttribute('aria-invalid',String(on));err.classList.toggle('show',on)
+}
+function normalizePhone(v){return v.replace(/[^\d]/g,'')}
+form.addEventListener('submit',e=>{
+  e.preventDefault();
+  if(document.getElementById('website').value)return;
+  const nombre=document.getElementById('nombre').value.trim();
+  const telefono=document.getElementById('whatsapp').value.trim();
+  const interes=document.getElementById('interes').value;
+  const objetivo=document.getElementById('objetivo').value || 'No definido';
+  const phoneDigits=normalizePhone(telefono);
+  const privacyConsent=document.getElementById('privacyConsent').checked;
+  const termsConsent=document.getElementById('termsConsent').checked;
+  const errors={nombre:nombre.length<2,whatsapp:phoneDigits.length<7,interes:!interes};
+  Object.entries(errors).forEach(([id,on])=>setError(id,on));
+  const consentError=document.getElementById('consentError');
+  const consentMissing=!privacyConsent||!termsConsent;
+  if(consentError) consentError.classList.toggle('show',consentMissing);
+  if(Object.values(errors).some(Boolean)||consentMissing){statusEl.className='form-status warn show';statusEl.textContent='Revisa los campos indicados y confirma las autorizaciones antes de continuar.';return}
+
+  const message=[
+    'Hola, quiero recibir información sobre lotes para vivienda en Los Cedros.',
+    '',
+    'Nombre: '+nombre,
+    'Mi WhatsApp: '+telefono,
+    'Interés: '+interes,
+    'Objetivo: '+objetivo,
+    'Tratamiento de datos autorizado: Sí',
+    'Condiciones comerciales leídas: Sí',
+    '',
+    'Quisiera conocer las opciones disponibles para construir vivienda y las condiciones comerciales vigentes.'
+  ].join('\n');
+
+  if(cfg.whatsapp){
+    const wa='https://wa.me/'+cfg.whatsapp.replace(/[^\d]/g,'')+'?text='+encodeURIComponent(message);
+    statusEl.className='form-status ok show';statusEl.textContent='Abriendo WhatsApp para enviar tu solicitud…';
+    window.open(wa,'_blank','noopener');
+    return;
+  }
+  if(cfg.email){
+    const mail='mailto:'+encodeURIComponent(cfg.email)+'?subject='+encodeURIComponent('Solicitud de información para vivienda - Los Cedros')+'&body='+encodeURIComponent(message);
+    statusEl.className='form-status ok show';statusEl.textContent='Abriendo tu aplicación de correo…';
+    location.href=mail;
+    return;
+  }
+
+  // Nunca fingimos que el lead fue enviado si no existe un destino real.
+  statusEl.className='form-status warn show';
+  statusEl.textContent='El canal de contacto aún no está configurado. Agrega el WhatsApp o correo comercial en config.js para activar el envío.';
+});
+
+
+(function(){
+  const deadline = new Date('2026-09-30T23:59:59-05:00').getTime();
+  const d=document.getElementById('cdDays'),h=document.getElementById('cdHours'),
+        m=document.getElementById('cdMinutes'),s=document.getElementById('cdSeconds'),
+        box=document.getElementById('bonusCountdown'),expired=document.getElementById('countdownExpired'),
+        label=document.getElementById('countdownLabel');
+  if(!d||!h||!m||!s||!box||!expired) return;
+  function draw(){
+    const diff=deadline-Date.now();
+    if(diff<=0){
+      box.style.display='none'; expired.style.display='block';
+      if(label) label.textContent='Promoción finalizada';
+      return false;
+    }
+    const total=Math.floor(diff/1000);
+    d.textContent=String(Math.floor(total/86400)).padStart(2,'0');
+    h.textContent=String(Math.floor((total%86400)/3600)).padStart(2,'0');
+    m.textContent=String(Math.floor((total%3600)/60)).padStart(2,'0');
+    s.textContent=String(total%60).padStart(2,'0');
+    return true;
+  }
+  draw();
+  const timerId=setInterval(()=>{if(!draw()) clearInterval(timerId)},1000);
+})();
+
+
+
+(function(){
+  const deadline = new Date('2026-09-30T23:59:59-05:00').getTime();
+
+  const full = {
+    d: document.getElementById('cdDays'),
+    h: document.getElementById('cdHours'),
+    m: document.getElementById('cdMinutes'),
+    s: document.getElementById('cdSeconds')
+  };
+  const mini = {
+    d: document.getElementById('miniDays'),
+    h: document.getElementById('miniHours'),
+    m: document.getElementById('miniMinutes'),
+    s: document.getElementById('miniSeconds')
+  };
+  const box = document.getElementById('bonusCountdown');
+  const expired = document.getElementById('countdownExpired');
+  const label = document.getElementById('countdownLabel');
+
+  function setGroup(group, days, hours, minutes, seconds){
+    if(group.d) group.d.textContent = String(days).padStart(2,'0');
+    if(group.h) group.h.textContent = String(hours).padStart(2,'0');
+    if(group.m) group.m.textContent = String(minutes).padStart(2,'0');
+    if(group.s) group.s.textContent = String(seconds).padStart(2,'0');
+  }
+
+  function draw(){
+    const diff = deadline - Date.now();
+
+    if(diff <= 0){
+      setGroup(full,0,0,0,0);
+      setGroup(mini,0,0,0,0);
+      if(box) box.style.display='none';
+      if(expired) expired.style.display='block';
+      if(label) label.textContent='Promoción finalizada';
+      return false;
+    }
+
+    const total = Math.floor(diff/1000);
+    const days = Math.floor(total/86400);
+    const hours = Math.floor((total%86400)/3600);
+    const minutes = Math.floor((total%3600)/60);
+    const seconds = total%60;
+
+    setGroup(full,days,hours,minutes,seconds);
+    setGroup(mini,days,hours,minutes,seconds);
+    return true;
+  }
+
+  draw();
+  const timerId = setInterval(function(){
+    if(!draw()) clearInterval(timerId);
+  },1000);
+})();
+
+</script>
+</body>
+</html>

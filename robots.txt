@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+# Reemplaza la URL de abajo cuando tengas tu dominio o URL pública definitiva.
+Sitemap: https://TU-DOMINIO-AQUI/sitemap.xml
